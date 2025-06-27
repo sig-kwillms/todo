@@ -1,0 +1,25 @@
+name: Polaris Security Scan
+"on":
+  push:
+    branches:
+      - main
+      - master
+      - develop
+      - stage
+      - release
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+      - stage
+      - release
+  workflow_dispatch: {}
+jobs:
+  scan:
+    steps:
+      - name: Polaris Security Scan
+        with:
+          include_diagnostics: falsef
+          test: anothercvx
+          dsds: null
